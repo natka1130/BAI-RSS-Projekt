@@ -1,0 +1,160 @@
+{
+  "channels": [
+    {
+      "code": "country",
+      "name": "Wiadomości z Kraju",
+      "channels": [
+        {
+          "code": "wp",
+          "name": "Wirtualna Polska",
+          "selected": 0
+        },
+        {
+          "code": "interia",
+          "name": "Interia",
+          "selected": 0
+        },
+        {
+          "code": "tvn24",
+          "name": "TVN 24",
+          "selected": 0
+        },
+        {
+          "code": "rmf",
+          "name": "RMF FM",
+          "selected": 0
+        },
+        {
+          "code": "polsat",
+          "name": "Polsat",
+          "selected": 0
+        }
+      ]
+    },
+    {
+      "code": "world",
+      "name": "Wiadomości ze Świata",
+      "channels": [
+        {
+          "code": "wp",
+          "name": "Wirtualna Polska",
+          "selected": 0
+        },
+        {
+          "code": "interia",
+          "name": "Interia",
+          "selected": 0
+        },
+        {
+          "code": "tvn24",
+          "name": "TVN 24",
+          "selected": 0
+        },
+        {
+          "code": "rmf",
+          "name": "RMF FM",
+          "selected": 0
+        },
+        {
+          "code": "polsat",
+          "name": "Polsat",
+          "selected": 0
+        }
+      ]
+    },
+    {
+      "code": "sport",
+      "name": "Sport",
+      "channels": [
+        {
+          "code": "wp",
+          "name": "Wirtualna Polska",
+          "selected": 0
+        },
+        {
+          "code": "interia",
+          "name": "Interia",
+          "selected": 0
+        },
+        {
+          "code": "tvn24",
+          "name": "TVN 24",
+          "selected": 0
+        },
+        {
+          "code": "rmf",
+          "name": "RMF FM",
+          "selected": 0
+        },
+        {
+          "code": "polsat",
+          "name": "Polsat",
+          "selected": 0
+        }
+      ]
+    },
+    {
+      "code": "business",
+      "name": "Biznes",
+      "channels": [
+        {
+          "code": "wp",
+          "name": "Wirtualna Polska",
+          "selected": 0
+        },
+        {
+          "code": "interia",
+          "name": "Interia",
+          "selected": 0
+        },
+        {
+          "code": "tvn24",
+          "name": "TVN 24",
+          "selected": 0
+        },
+        {
+          "code": "rmf",
+          "name": "RMF FM",
+          "selected": 0
+        },
+        {
+          "code": "polsat",
+          "name": "Polsat",
+          "selected": 0
+        }
+      ]
+    },
+    {
+      "code": "fun",
+      "name": "Rozrywka",
+      "channels": [
+        {
+          "code": "wp",
+          "name": "Wirtualna Polska",
+          "selected": 0
+        },
+        {
+          "code": "interia",
+          "name": "Interia",
+          "selected": 0
+        },
+        {
+          "code": "tvn24",
+          "name": "TVN 24",
+          "selected": 0
+        },
+        {
+          "code": "rmf",
+          "name": "RMF FM",
+          "selected": 0
+        },
+        {
+          "code": "polsat",
+          "name": "Polsat",
+          "selected": 0
+        }
+      ]
+    }
+  ]
+}
+

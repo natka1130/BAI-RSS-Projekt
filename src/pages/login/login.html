@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login / Register
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="myForm">
+    <ion-item>
+      <ion-label for="email">E-Mail</ion-label>
+      <ion-input formControlName="email" type="email" id="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input formControlName="password" type="password" id="password"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" name="login" [disabled]="!myForm.valid" (click)="onLogin()">Login</button>
+    <button ion-button type="submit" name="register" [disabled]="!myForm.valid" (click)="onRegister()">Register</button>
+  </form>
+</ion-content>

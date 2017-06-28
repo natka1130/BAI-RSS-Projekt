@@ -1,0 +1,37 @@
+{
+  "channels": [
+    {
+      "code": "country",
+      "name": "Wiadomości z Kraju",
+      "channels": [
+        {
+          "code": "wp",
+          "name": "Wirtualna Polska",
+          "link": "http://wiadomosci.wp.pl/kat,1342,ver,rss,rss.xml"
+        },
+        {
+          "code": "interia",
+          "name": "Interia",
+          "link": "http://fakty.interia.pl/polska/feed"
+        }
+      ]
+    },
+    {
+      "code": "business",
+      "name": "Biznes",
+      "channels": [
+        {
+          "code": "interia",
+          "name": "Interia",
+          "link": "http://kanaly.rss.interia.pl/biznes.xml"
+        },
+        {
+          "code": "rmf",
+          "name": "RMF FM",
+          "link": "http://www.rmf24.pl/ekonomia/feed"
+        }
+      ]
+    }
+  ]
+}
+
