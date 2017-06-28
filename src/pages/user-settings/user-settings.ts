@@ -13,10 +13,12 @@ export class UserSettings implements OnInit{
   }
 
   ngOnInit() : any {
-    this.authService.getUserDefaultSettings()
+    this.authService.getUserChannelsSettings()
       .subscribe((data) => this.channels = data.channels);
   }
-  consoleChannels(a,b,c) {
-    console.log(a,b,c);
+  consoleChannels(categotryIndex, channelIndex, event) {
+    const selection = event.checked;
+    this.authService.updateUserSetting(categotryIndex, channelIndex,selection).subscribe();
+    // https://auth-9d20d.firebaseio.com/userdata/CMCt4NiqQKZwADaNjdDRqiMfnt82/channels/categotryIndex/channels/channelIndex/selected.json
   }
 }

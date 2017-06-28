@@ -11,11 +11,11 @@
 
 
 <ion-content>
-  <ion-list *ngFor="let channel of channels">
+  <ion-list *ngFor="let channel of channels; let categotryIndex = index;">
     <ion-list-header>{{channel.name}}</ion-list-header>
-    <ion-item *ngFor="let singleChannel of channel.channels">
-      <ion-label>{{singleChannel.name}}</ion-label>
-      <ion-toggle (ionChange)="consoleChannels(channel.code, singleChannel.code)"></ion-toggle>
+    <ion-item *ngFor="let singleChannel of channel.channels; let channelIndex = index;">
+      <ion-label>{{singleChannel.name}} zaznaczony</ion-label>
+      <ion-toggle (ionChange)="consoleChannels(categotryIndex, channelIndex, $event)" checked={{singleChannel.selected}}></ion-toggle>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -77,4 +77,12 @@ export class AuthService {
         //TODO call with authenthication
         return this.http.put('https://auth-9d20d.firebaseio.com/userdata/' + this.getUserId() + '.json', body, {headers: headers});
     }
+
+    updateUserSetting(categotryIndex, channelIndex, selection) {
+        const url =  `https://auth-9d20d.firebaseio.com/userdata/${this.getUserId()}/channels/${categotryIndex}/channels/${channelIndex}/selected.json`;
+        const headers = new Headers({
+            'Content-Type' : 'application/json'
+        });
+        return this.http.put(url, selection, {headers: headers});
+    }
 }

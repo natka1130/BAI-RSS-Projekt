@@ -7,27 +7,27 @@
         {
           "code": "wp",
           "name": "Wirtualna Polska",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "interia",
           "name": "Interia",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "tvn24",
           "name": "TVN 24",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "rmf",
           "name": "RMF FM",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "polsat",
           "name": "Polsat",
-          "selected": 0
+          "selected": false
         }
       ]
     },
@@ -38,27 +38,27 @@
         {
           "code": "wp",
           "name": "Wirtualna Polska",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "interia",
           "name": "Interia",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "tvn24",
           "name": "TVN 24",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "rmf",
           "name": "RMF FM",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "polsat",
           "name": "Polsat",
-          "selected": 0
+          "selected": false
         }
       ]
     },
@@ -69,27 +69,27 @@
         {
           "code": "wp",
           "name": "Wirtualna Polska",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "interia",
           "name": "Interia",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "tvn24",
           "name": "TVN 24",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "rmf",
           "name": "RMF FM",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "polsat",
           "name": "Polsat",
-          "selected": 0
+          "selected": false
         }
       ]
     },
@@ -100,27 +100,27 @@
         {
           "code": "wp",
           "name": "Wirtualna Polska",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "interia",
           "name": "Interia",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "tvn24",
           "name": "TVN 24",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "rmf",
           "name": "RMF FM",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "polsat",
           "name": "Polsat",
-          "selected": 0
+          "selected": false
         }
       ]
     },
@@ -131,27 +131,27 @@
         {
           "code": "wp",
           "name": "Wirtualna Polska",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "interia",
           "name": "Interia",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "tvn24",
           "name": "TVN 24",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "rmf",
           "name": "RMF FM",
-          "selected": 0
+          "selected": false
         },
         {
           "code": "polsat",
           "name": "Polsat",
-          "selected": 0
+          "selected": false
         }
       ]
     }
