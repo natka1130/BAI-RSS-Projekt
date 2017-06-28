@@ -11,11 +11,13 @@ declare var firebase: any;
 export class AuthService {
     public userSettingsUrl: string = '../assets/userdata-register.json';
     private userRegisterDefaultData: any;
+    private userSettings;
 
     constructor(private http: Http, private platform: Platform) {
-        this.getUserDefaultSettings()
+        this.fetchUserDefaultSettings()
           .subscribe((data) => this.userRegisterDefaultData = data);
     }
+
     signupUser(user: User) {
         firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
             .catch(function (error) {
@@ -38,16 +40,10 @@ export class AuthService {
         var user = firebase.auth().currentUser;
 
         if (user) {
+            this.fetchUserChannelsSettings()
+              .subscribe((data) => this.userSettings = data.channels);
             return true;
         } else {
-            return false;
-        }
-    }
-
-    getUserInfo() {
-        if(this.isAuthenticated()) {
-            return firebase.auth().currentUser;
-        } else  {
             return false;
         }
     }
@@ -56,12 +52,16 @@ export class AuthService {
         return firebase.auth().currentUser.uid;
     }
 
-    getUserChannelsSettings(): Observable<any> {
-        return this.http.get('https://auth-9d20d.firebaseio.com/userdata/' + this.getUserId() + '.json')
+    getUserSettings() {
+        return this.userSettings;
+    }
+
+    fetchUserChannelsSettings(): Observable<any> {
+        return this.http.get(`https://auth-9d20d.firebaseio.com/userdata/${this.getUserId()}.json`)
           .map((res:any) => res.json());
     }
 
-    getUserDefaultSettings() : Observable<any> {
+    fetchUserDefaultSettings() : Observable<any> {
         if (this.platform.is('cordova') && this.platform.is('android')) {
             this.userSettingsUrl = "/android_asset/www/assets/channels.json";
         }

@@ -13,8 +13,7 @@ export class UserSettings implements OnInit{
   }
 
   ngOnInit() : any {
-    this.authService.getUserChannelsSettings()
-      .subscribe((data) => this.channels = data.channels);
+    this.channels = this.authService.getUserSettings();
   }
   consoleChannels(categotryIndex, channelIndex, event) {
     const selection = event.checked;
