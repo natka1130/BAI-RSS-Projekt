@@ -9,13 +9,11 @@ declare var firebase: any;
 
 @Injectable()
 export class AuthService {
-    public userSettingsUrl: string = '../assets/userdata-register.json';
+    private userSettingsUrl: string = '../assets/userdata-register.json';
     private userRegisterDefaultData: any;
     private userSettings;
 
     constructor(private http: Http, private platform: Platform) {
-        this.fetchUserDefaultSettings()
-          .subscribe((data) => this.userRegisterDefaultData = data);
     }
 
     signupUser(user: User) {
@@ -23,6 +21,9 @@ export class AuthService {
             .catch(function (error) {
                 console.log(error);
             });
+
+        this.fetchUserDefaultSettings()
+          .subscribe((data) => this.userRegisterDefaultData = data);
     }
 
     signinUser(user: User) {
@@ -63,7 +64,7 @@ export class AuthService {
 
     fetchUserDefaultSettings() : Observable<any> {
         if (this.platform.is('cordova') && this.platform.is('android')) {
-            this.userSettingsUrl = "/android_asset/www/assets/channels.json";
+            this.userSettingsUrl = "/android_asset/www/assets/userdata-register.json";
         }
         return this.http.get(this.userSettingsUrl)
           .map((res:any) => res.json());
