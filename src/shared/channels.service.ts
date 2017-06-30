@@ -36,6 +36,12 @@ export class ChannelsService {
       });
   }
 
+  getChannelLink(cateogry, channel) {
+    this.channels.map((cat) => {
+      console.log(cat);
+    })
+  }
+
   public fetchChannels(): Observable<any> {
     if (this.platform.is('cordova') && this.platform.is('android')) {
       this.apiHost = "/android_asset/www/assets/channels.json";
