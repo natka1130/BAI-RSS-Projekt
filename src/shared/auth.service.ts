@@ -41,8 +41,7 @@ export class AuthService {
         var user = firebase.auth().currentUser;
 
         if (user) {
-            this.fetchUserChannelsSettings()
-              .subscribe((data) => this.userSettings = data.channels);
+            this.fetchUserChannelsSettings().subscribe((data) => this.userSettings = data.channels);
             return true;
         } else {
             return false;

@@ -19,6 +19,7 @@ export class LoginPage {
 
   redirectIfIsAuthenticated() {
     if(this.authService.isAuthenticated()) {
+      //TODO fetch user settings here, and then setRoot to tabspage
       this.navController.setRoot(TabsPage);
     }
   }

@@ -18,15 +18,11 @@ export class ChannelsService {
 
   init() {
     this.fetchChannels()
-      .subscribe((data) => this.channels = data);
-
-    if(this.authService.isAuthenticated()) {
-      this.userSettings = this.authService.getUserSettings()
-    };
+      .subscribe((data) => this.channels = data.channels);
   }
 
-  getCountryWp() {
-    return this.http.get('http://www.polsatnews.pl/rss/kraj.xml')
+  getCountryWp(link) {
+    return this.http.get(link)
       .map(res => {
         let news;
         xml2js.parseString( res.text(), function (err, result) {
@@ -37,9 +33,9 @@ export class ChannelsService {
   }
 
   getChannelLink(cateogry, channel) {
-    this.channels.map((cat) => {
-      console.log(cat);
-    })
+    let selectedCat = this.channels.find((e) => e.code === cateogry);
+    let selectedChannel = selectedCat.channels.find(e => e.code === channel);
+    return selectedChannel.link;
   }
 
   public fetchChannels(): Observable<any> {

@@ -8,28 +8,33 @@ import { AuthService } from "../../shared/auth.service";
   templateUrl: 'home.html'
 })
 export class HomePage implements OnInit{
-  private channels: any;
+
+  private countryChannels = []; 
+  private worldChannels = []; 
+  private sportChannels = [];
+  private businessChannels = [];
+  private funChannels = [];
+
+  private userSelectedChannels = [];
+
+  private finishedLoadingChanels: boolean = false;
+
   constructor(public navCtrl: NavController, private authService: AuthService, private channelsService: ChannelsService) {
 
   }
 
   ngOnInit() : any {
     this.getUserSettings();
-
-    // this.channelsService.getChannelLink(1,2);
   }
 
+  // TODO need to be moved after login or before rendering tabs
   getUserSettings() {
     this.authService.fetchUserChannelsSettings()
       .subscribe((data) => {
+        // Here we are running filtering user settings
+        // it will return only selected channels
         this.filterUserSettings(data.channels);
       });
-  }
-
-  getPosts() {
-    this.channelsService.getCountryWp().subscribe(response => {
-      console.log(response);
-    });
   }
 
   filterUserSettings(categories) {
@@ -38,14 +43,30 @@ export class HomePage implements OnInit{
     categories.map((cat) => {
       let selected = cat.channels.filter( (channel) => channel.selected === true );
       if(selected.length !== 0) {
-        userSelectedChannels.push({
-          "code" : cat.code,
-          "channels": selected
-        })
+        switch (cat.code) {
+          case "country":
+            this.countryChannels = selected.map(e => e.code);
+            break;
+          case "world":
+            this.worldChannels = selected.map(e => e.code);
+            break;
+          case "sport":
+            this.sportChannels = selected.map(e => e.code);
+            break;
+          case "business":
+            this.businessChannels = selected.map(e => e.code);
+            break;
+          case "fun":
+            this.funChannels = selected.map(e => e.code);
+            break;    
+          default:
+            break;
+        }
       }
     });
-
-    return userSelectedChannels;
+    this.finishedLoadingChanels = true;
   }
+  goToCountryCard() {
 
+  }
 }

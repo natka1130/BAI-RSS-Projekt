@@ -1,25 +1,14 @@
-.card-background-page {
+.spinner > *
+{
+     display: flex!important;
+     align-content: center!important;
+     align-items: center!important;
+}
 
-  ion-card {
-    position: relative;
-    text-align: center;
-  }
-
-  .card-title {
-    position: absolute;
-    top: 36%;
-    font-size: 2.0em;
-    width: 100%;
-    font-weight: bold;
-    color: #fff;
-  }
-
-  .card-subtitle {
-    font-size: 1.0em;
-    position: absolute;
-    top: 52%;
-    width: 100%;
-    color: #fff;
-  }
-
+ion-spinner * {
+  width: 28px;
+  height: 28px;
+  stroke: #444;
+  fill: #222;
+  position: relative
 }

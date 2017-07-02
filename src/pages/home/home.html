@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header xmlns="">
   <ion-navbar>
     <ion-title>Home</ion-title>
     <ion-buttons end>
@@ -10,27 +10,12 @@
 </ion-header>
 
 <ion-content class="card-background-page" padding>
-  <ion-card>
-    <img src="assets/img/card-saopaolo.png"/>
-    <div class="card-title">São Paulo</div>
-    <div class="card-subtitle">41 Listings</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/img/card-amsterdam.png"/>
-    <div class="card-title">Amsterdam</div>
-    <div class="card-subtitle">64 Listings</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/img/card-sf.png"/>
-    <div class="card-title">San Francisco</div>
-    <div class="card-subtitle">72 Listings</div>
-  </ion-card>
-
-  <ion-card>
-    <img src="assets/img/card-madison.png"/>
-    <div class="card-title">Madison</div>
-    <div class="card-subtitle">28 Listings</div>
-  </ion-card>
+  <div *ngIf="finishedLoadingChanels">lorem ipsum dolor es</div>
+  <div *ngIf="!finishedLoadingChanels" class="spinner">
+    <ion-row>
+      <ion-col text-center>
+        <ion-spinner text-center name="crescent"></ion-spinner>
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-content>
